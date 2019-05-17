@@ -3,3 +3,5 @@ BUILD/
 .mbed
 *.pyc
 mbed-os/
+GettingStarted.html
+Makefile

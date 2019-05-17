@@ -13,8 +13,11 @@
     },
     "target_overrides": {
         "*": {
+            "target.features_remove": ["STORAGE"],
             "platform.all-stats-enabled": true,
-            "ble.ble-role-observer": true,
+            "platform.stdio-flush-at-exit": false,
+            "filesystem.present": false,
+            "ble.ble-role-observer": false,
             "ble.ble-role-central": false,
             "ble.ble-feature-gatt-client": false,
             "ble.ble-feature-security": true,
@@ -49,7 +52,6 @@
         },
         "NRF52840_DK": {
             "target.features_add": ["BLE"],
-            "target.features_remove": ["lora", "nsapi", "cellular"],
             "target.extra_labels_add": ["CORDIO", "CORDIO_LL", "SOFTDEVICE_NONE", "NORDIC_CORDIO"],
             "target.extra_labels_remove": ["SOFTDEVICE_COMMON", "SOFTDEVICE_S140_FULL", "NORDIC_SOFTDEVICE"],
             "ble_button_pin_name": "BUTTON1"
