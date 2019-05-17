@@ -1,3 +1,18 @@
+# How to run
+This example is based on `mbed-os-example-ble/BLE_Button` app.
+Some features have been removed to test footprint size.
+The nRF42840_DK needs to be flashed with the MBED interface firmware (to provide CMSIS-DAPLINK)
+
+Example debug session after cloning this repo:
+- `mbed deploy`
+- `mbed compile -m NRF52840_DK -t GCC_ARM --flash`
+- `pyocd gdbserver` (in another terminal)
+- `arm-none-eabi-gdb BUILD/.../file.elf`
+  - `target remote localhost:<PYOCD PORT>`
+  - `load`
+  - `monitor reset`
+
+# Application features
 BLE_Button is a BLE service template. It handles a read-only characteristic with a simple input (boolean values). The input's source is the button on the board itself - the characteristic's value changes when the button is pressed or released.
 
 The template covers:
