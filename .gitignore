@@ -1,0 +1,5 @@
+.DS_Store
+BUILD/
+.mbed
+*.pyc
+mbed-os/
